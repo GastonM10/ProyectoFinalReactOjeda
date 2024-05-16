@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: .5rem;
+}
+
+.header h1 {
+    color: greenyellow;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.items-container {
+    min-height: 50vh;
+    display: grid;
+    place-items: center;
+}
