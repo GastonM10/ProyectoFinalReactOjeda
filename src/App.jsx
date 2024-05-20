@@ -3,10 +3,13 @@ import { Header } from './components/header/Header'
 import './css/main.css'
 
 function App() {
+
+  const h1ItemListContainer = "Galeria de productos";
+
   return (
     <>
       <Header />
-      <ItemListContainer />
+      <ItemListContainer titleH1={h1ItemListContainer} />
     </>
   )
 }

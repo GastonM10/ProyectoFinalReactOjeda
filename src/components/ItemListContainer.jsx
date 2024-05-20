@@ -1,7 +1,7 @@
-export const ItemListContainer = () => {
+export const ItemListContainer = (props) => {
   return (
     <div className="items-container">
-      <h2 className="fs-4 fw-normal">Galeria de productos</h2>
+      <h1 className="fs-4 fw-normal">{props.titleH1}</h1>
 
       <div className="container">
         <div className="row">
