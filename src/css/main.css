@@ -17,12 +17,22 @@
     list-style-type: none;
 }
 
-.nav-link {
+.nav-text-custom {
     text-decoration: none;
+    color: white;
 }
 
-.items-container {
+.nav-text-custom:hover {
+    color: greenyellow;
+}
+
+.items-list-container, .item-detail {
     min-height: 50vh;
     display: grid;
     place-items: center;
+    margin-top: 80px;
+}
+
+.text-footer {
+    color: greenyellow;
 }

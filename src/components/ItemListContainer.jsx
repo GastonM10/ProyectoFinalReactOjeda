@@ -1,26 +1,47 @@
-export const ItemListContainer = (props) => {
-  return (
-    <div className="items-container">
-      <h1 className="fs-4 fw-normal">{props.titleH1}</h1>
+import React, { useEffect, useState } from 'react';
+import data from "../data/productos.json";
+import categories from "../data/categorias.json";
+import { useParams } from 'react-router-dom';
+import { ItemList } from './ItemList';
 
+export const ItemListContainer = (props) => {
+  
+  let { categoryId } = useParams();
+  let [productos, setProductos] = useState([]);
+  let [titulo, setTitulo] = useState(props.h1Prods);
+
+  const pedirProductos = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(data);
+      }, 1000);
+    })
+  }
+
+  useEffect(() => {
+    
+    pedirProductos()
+      .then((res) => {
+        if (!categoryId) {
+          setTitulo(props.h1Prods);
+          setProductos(res);
+        } else {
+          setTitulo(categories.find((cat) => cat.id === categoryId).nombre);
+          setProductos(res.filter((prod) => prod.categoria.id === categoryId));
+        }
+      })
+      
+  }, [categoryId]);
+
+  return (
+    <div className="items-list-container">
+      <h1 className="display-4 fw-normal pb-3">{titulo}</h1>
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, expedita libero placeat cupiditate id quae et saepe. Maiores asperiores temporibus quisquam dignissimos exercitationem quaerat, laudantium, dolorum repellat voluptatum odio eveniet.
-            Ducimus inventore magni nesciunt numquam dolore laborum, error, aut corrupti est, sunt atque? Quos, rerum ut odio sequi minima sapiente sed laudantium rem saepe dolores tempore, repudiandae neque id deserunt?
-            Quae qui voluptate sint, vero dolorum quo a dolor pariatur neque asperiores debitis distinctio impedit hic consequuntur! Eum totam cum, corporis esse aperiam exercitationem officiis tempora repudiandae, pariatur delectus fugiat.
-            Error iure maiores ducimus distinctio!
-          </div>
-          <div className="col-md-6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, expedita libero placeat cupiditate id quae et saepe. Maiores asperiores temporibus quisquam dignissimos exercitationem quaerat, laudantium, dolorum repellat voluptatum odio eveniet.
-            Ducimus inventore magni nesciunt numquam dolore laborum, error, aut corrupti est, sunt atque? Quos, rerum ut odio sequi minima sapiente sed laudantium rem saepe dolores tempore, repudiandae neque id deserunt?
-            Quae qui voluptate sint, vero dolorum quo a dolor pariatur neque asperiores debitis distinctio impedit hic consequuntur! Eum totam cum, corporis esse aperiam exercitationem officiis tempora repudiandae, pariatur delectus fugiat.
-            Error iure maiores ducimus distinctio!
-          </div>
-
+            <ItemList productos={productos} />
         </div>
-
       </div>
     </div>
   )
+  
 }

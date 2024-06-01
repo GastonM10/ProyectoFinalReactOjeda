@@ -1,7 +1,7 @@
-export const Carrito = () => {
+export const Carrito = (props) => {
   return (
     <div>
-        🛒 10
+        🛒 ({props.cantItem})
     </div>
   )
 }
