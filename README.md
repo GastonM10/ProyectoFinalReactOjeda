@@ -1,2 +1,2 @@
 # CoderHouse React JS - Comisión 57765
-## Primer Pre Entrega - Gaston Ojeda 
+## Segunda Pre Entrega - Gaston Ojeda 
