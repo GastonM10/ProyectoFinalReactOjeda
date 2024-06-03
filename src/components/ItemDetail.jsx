@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
                     </div>
                 </div>
             </div>
-            : <p>Cargando información del producto...</p>
+            : <div className="d-flex justify-content-center align-items-center"><img src="../src/assets/img/loading.gif" className="w-25" /></div>
         }
     </div>
   )

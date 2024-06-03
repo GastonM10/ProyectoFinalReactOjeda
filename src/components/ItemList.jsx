@@ -11,7 +11,7 @@ export const ItemList = ( {productos} ) => {
         productos.map(producto => {
           return <Item key={producto.id} producto={producto} />
         })
-        : <div className="d-flex justify-content-center align-items-center"><p>Cargando productos...</p></div>
+        : <div className="d-flex justify-content-center align-items-center"><img src="../src/assets/img/loading.gif" className="w-25" /></div>
       }
     </div>
   )

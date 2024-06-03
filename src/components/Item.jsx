@@ -7,7 +7,7 @@ export const Item = ( {producto} ) => {
         <div className="col-4 mb-3 w-25">
             <div className="producto">
                 <div className="card text-bg-success custom-card-height">
-                    <img src={producto.imagen} className="rounded-top" alt="..." />
+                    <img src={producto.imagen} className="rounded-top" />
                     <div className="card-header fs-5">{producto.nombre}</div>
                     <div className="card-body">
                         <h5 className="card-title fw-bold">$ {producto.precio}</h5>
