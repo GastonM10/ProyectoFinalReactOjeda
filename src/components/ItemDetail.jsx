@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
                     </div>
                 </div>
             </div>
-            : <div className="d-flex justify-content-center align-items-center"><img src="../public/img/loading.gif" className="w-25" /></div>
+            : <div className="d-flex justify-content-center align-items-center"><img src="../img/loading.gif" className="w-25" /></div>
         }
     </div>
   )

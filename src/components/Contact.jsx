@@ -10,7 +10,7 @@ const Contact = () => {
             <div className="row d-flex justify-content-center">
 
                 <article className="col-10 col-md-6 d-flex align-items-center">
-                    <img src="../public/img/contact-form.png" className="w-75" />
+                    <img src="../img/contact-form.png" className="w-75" />
                 </article>
 
              
