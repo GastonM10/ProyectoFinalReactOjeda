@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Correa para perros",
         "precio": 3500,
-        "imagen": "../src/assets/img/correa-1_400.jpg",
+        "imagen": "../public/img/correa-1_400.jpg",
         "descripcion": "Correa para perros 2.5mts.",
         "categoria": {
             "id": "correas",
@@ -14,7 +14,7 @@
         "id": 2,
         "nombre": "Correa para perros",
         "precio": 8200,
-        "imagen": "../src/assets/img/correa-2_400.jpg",
+        "imagen": "../public/img/correa-2_400.jpg",
         "descripcion": "Correa para perros retráctil 5mts.",
         "categoria": {
             "id": "correas",
@@ -25,7 +25,7 @@
         "id": 3,
         "nombre": "Pretal para gatos",
         "precio": 4600,
-        "imagen": "../src/assets/img/pretal-1_400.jpg",
+        "imagen": "../public/img/pretal-1_400.jpg",
         "descripcion": "Pretal para gatos color rojo con broches plásticos.",
         "categoria": {
             "id": "correas",
@@ -36,7 +36,7 @@
         "id": 4,
         "nombre": "Pretal para gatos",
         "precio": 3100,
-        "imagen": "../src/assets/img/pretal-2_400.jpg",
+        "imagen": "../public/img/pretal-2_400.jpg",
         "descripcion": "Pretal para gatos color celeste con hebillas metálicas.",
         "categoria": {
             "id": "correas",
@@ -47,7 +47,7 @@
         "id": 5,
         "nombre": "Hueso de tela trenzado",
         "precio": 3400,
-        "imagen": "../src/assets/img/juguete-1_400.jpg",
+        "imagen": "../public/img/juguete-1_400.jpg",
         "descripcion": "Hueso de tela trenzado sirve como mordillo.",
         "categoria": {
             "id": "juguetes",
@@ -58,7 +58,7 @@
         "id": 6,
         "nombre": "Peluche cerdo",
         "precio": 3300,
-        "imagen": "../src/assets/img/juguete-2_400.jpg",
+        "imagen": "../public/img/juguete-2_400.jpg",
         "descripcion": "Peluche cerdo sonajero.",
         "categoria": {
             "id": "juguetes",
@@ -69,7 +69,7 @@
         "id": 7,
         "nombre": "Pelota comedero",
         "precio": 4150,
-        "imagen": "../src/assets/img/juguete-3_400.jpg",
+        "imagen": "../public/img/juguete-3_400.jpg",
         "descripcion": "Pelota de goma comedero.",
         "categoria": {
             "id": "juguetes",
@@ -80,7 +80,7 @@
         "id": 8,
         "nombre": "Abrigo oso para perros",
         "precio": 6500,
-        "imagen": "../src/assets/img/ropa-1_400.jpg",
+        "imagen": "../public/img/ropa-1_400.jpg",
         "descripcion": "Abrigo de oso para perros talle 2.",
         "categoria": {
             "id": "ropa",
@@ -91,7 +91,7 @@
         "id": 9,
         "nombre": "Traje para gatos",
         "precio": 6800,
-        "imagen": "../src/assets/img/ropa-2_400.jpg",
+        "imagen": "../public/img/ropa-2_400.jpg",
         "descripcion": "Traje para gatos con moño talle universal.",
         "categoria": {
             "id": "ropa",
@@ -102,7 +102,7 @@
         "id": 10,
         "nombre": "Comedero con botella",
         "precio": 8700,
-        "imagen": "../src/assets/img/comedero-1_400.jpg",
+        "imagen": "../public/img/comedero-1_400.jpg",
         "descripcion": "Comedero doble con boquilla para botella.",
         "categoria": {
             "id": "comederos",
@@ -113,7 +113,7 @@
         "id": 11,
         "nombre": "Comedero automático",
         "precio": 15200,
-        "imagen": "../src/assets/img/comedero-2_400.jpg",
+        "imagen": "../public/img/comedero-2_400.jpg",
         "descripcion": "Comedero automático pilas/12v.",
         "categoria": {
             "id": "comederos",
@@ -124,7 +124,7 @@
         "id": 12    ,
         "nombre": "Comedero metálico",
         "precio": 5150,
-        "imagen": "../src/assets/img/comedero-3_400.jpg",
+        "imagen": "../public/img/comedero-3_400.jpg",
         "descripcion": "Comedero metálico Prince 200grs.",
         "categoria": {
             "id": "comederos",
