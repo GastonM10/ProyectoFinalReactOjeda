@@ -1,6 +1,8 @@
+import React from 'react'
+
 export const Carrito = (props) => {
   return (
-    <div>
+    <div className='container carrito'>
         🛒 ({props.cantItem})
     </div>
   )
