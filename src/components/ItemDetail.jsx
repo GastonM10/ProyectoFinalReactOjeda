@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import { ItemCount } from './ItemCount';
+import '../css/main.css'
 
 
 export const ItemDetail = ( { producto } ) => {
@@ -33,7 +34,7 @@ export const ItemDetail = ( { producto } ) => {
     };
     
     return (
-        <div className='container pt-5 w-50'>
+        <div className='container pt-5 w-50 custom-height'>
             <div className="card mt-5 text-bg-secondary">
                 <div className="row g-0">
                     <div className="col-md-4 d-flex align-items-center p-1">

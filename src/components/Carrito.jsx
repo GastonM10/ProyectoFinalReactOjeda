@@ -8,7 +8,7 @@ const Carrito = () => {
     const { carrito, calcTot, deleteProduct, emptyCart } = useContext(CartContext);
 
     return (
-        <div className='container mt-5 pt-5'>
+        <div className='container mt-5 pt-5 custom-height'>
             {carrito.map((prod) => (
                 <div key={prod.id} className='d-flex justify-content-center'>
                     <div className="card mb-3 mb-lg-0 m-1 bg-light w-100">

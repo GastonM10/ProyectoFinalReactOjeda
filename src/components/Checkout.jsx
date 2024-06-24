@@ -40,7 +40,7 @@ export const Checkout = () => {
     }
 
     return (
-        <div className='container mt-5 pt-5 d-flex justify-content-center'>
+        <div className='container mt-5 pt-5 d-flex justify-content-center custom-height'>
             { calcCant() > 0 ? (
                 <form onSubmit={handleSubmit(comprar)} className='justify-content-center'>
                     <h1>Complete sus datos para finalizar la compra</h1>
