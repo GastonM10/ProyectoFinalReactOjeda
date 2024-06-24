@@ -33,7 +33,7 @@ export const CartProvider = ( {children} ) => {
     }
   
     const calcTot = () => {
-      return carrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0); //Se añadiría ".toFixed(2)" luego de "0)"
+      return carrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
     }
   
     const emptyCartCheckout = () => {
