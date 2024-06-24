@@ -1,41 +1,59 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import data from "../data/productos.json";
-import '../css/main.css';
+import React, { useContext, useState } from 'react';
+import { CartContext } from '../context/CartContext';
+import { ItemCount } from './ItemCount';
 
-const ItemDetailContainer = () => {
 
-    let { itemId } = useParams();
-    let [producto, setProducto] = useState(undefined);
+export const ItemDetail = ( { producto } ) => {
 
-    useEffect(() => {
-        setProducto(data.find((prod) => prod.id === parseInt(itemId)));
-    }, [itemId])
+    const { addToCart } = useContext(CartContext);   
+    const [cantidad, setCantidad] = useState(1);
+
+    const handleRestar = () => {
+        cantidad > 1 && setCantidad(cantidad - 1)
+    };
+
+    const handleSumar = () => {
+        setCantidad(cantidad + 1);
+        
+    };
+
+    const handleAgregar = () => {
+        addToCart(producto, cantidad);
+
+        Toastify({
+            text: "Se agregó al carrito ✔️\n▶️ " + producto.nombre + " x " + cantidad,
+            style: {
+                background: "linear-gradient(to right, #57FF10, #6EFF30)",
+                color: "#313131"
+            },
+            offset: {
+                y: 50,
+            }
+        }).showToast();
+    };
     
-
-  return (
-    <div className='d-flex justify-content-center align-items-center pt-4 item-detail'>
-        {
-            producto ? 
-            <div className="card mb-5 text-bg-secondary">
+    return (
+        <div className='container pt-5 w-50'>
+            <div className="card mt-5 text-bg-secondary">
                 <div className="row g-0">
                     <div className="col-md-4 d-flex align-items-center p-1">
                     <a href={producto.imagen}><img src={producto.imagen} className="img-fluid rounded" /></a>
                     </div>
                     <div className="col-md-8 d-flex align-items-center">
                         <div className="card-body">
-                            <h5 className="card-title fs-1 fw-bold">{producto.nombre}</h5>
-                            <p className="card-text fs-3">{producto.descripcion}</p>
-                            <p className="card-text fs-1 fw-bold">$ {producto.precio}</p>
-                            <button type="button" className="btn btn-success">Añadir al carrito</button>
+                            <h5 className="card-title fs-3 fw-normal">{producto.nombre}</h5>
+                            <p className="card-text fs-5 fw-normal">{producto.descripcion}</p>
+                            <p className="card-text fs-3 fw-normal">$ {producto.precio}</p>
+                            <ItemCount
+                                cantidad={cantidad}
+                                handleSumar={handleSumar}
+                                handleRestar={handleRestar}
+                                handleAgregar={handleAgregar}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
-            : <div className="d-flex justify-content-center align-items-center"><img src="../img/loading.gif" className="w-25" /></div>
-        }
-    </div>
-  )
+        </div>
+    )
 }
-
-export default ItemDetailContainer
