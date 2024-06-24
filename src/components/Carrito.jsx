@@ -46,8 +46,8 @@ const Carrito = () => {
                     </div>
                 </div>
             ) : (
-                <div className='d-flex justify-content-start'>
-                    <h2>Carrito vacío</h2>
+                <div className='d-flex justify-content-center'>
+                    <h2 className='fs-2 fw-normal'>El carrito se encuentra vacío, chequeá nuestros productos de la <Link to="/" className='text-decoration-none'>Tienda</Link></h2>
                 </div>
             )}
         

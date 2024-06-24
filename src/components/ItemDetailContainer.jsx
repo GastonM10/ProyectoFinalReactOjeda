@@ -24,11 +24,11 @@ const ItemDetailContainer = () => {
         }, [itemId]);
 
     if(loading){
-        return <div className="pt-5 mt-5 d-flex justify-content-center align-items-center"><img src="../img/loading.gif" className="w-25" /></div>
+        return <div className="pt-5 mt-5 d-flex justify-content-center align-items-center custom-height"><img src="../img/loading.gif" className="w-25" /></div>
     }else if(producto){
         return <ItemDetail producto={producto} />  
     }else{
-        return <div className="pt-5 mt-5 d-flex justify-content-center align-items-center"><h1 className="text-white">No se ha encontrado el producto</h1></div>
+        return <div className="pt-5 mt-5 d-flex justify-content-center align-items-center custom-height"><h1 className="text-white">No se ha encontrado el producto</h1></div>
     }
 
 

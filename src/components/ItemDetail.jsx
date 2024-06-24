@@ -23,6 +23,7 @@ export const ItemDetail = ( { producto } ) => {
 
         Toastify({
             text: "Se agregó al carrito ✔️\n▶️ " + producto.nombre + " x " + cantidad,
+            destination: "/carrito",
             style: {
                 background: "linear-gradient(to right, #57FF10, #6EFF30)",
                 color: "#313131"
