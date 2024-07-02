@@ -31,8 +31,6 @@ const ItemDetailContainer = () => {
         return <div className="pt-5 mt-5 d-flex justify-content-center align-items-center custom-height"><h1 className="text-white">No se ha encontrado el producto</h1></div>
     }
 
-
-
 }
 
 export default ItemDetailContainer

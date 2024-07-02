@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config';
-import '../../css/main.css'
 
 export const NavBar = () => {
 
@@ -20,7 +19,7 @@ export const NavBar = () => {
 
   return (
     <nav className="nav justify-content-center">
-        <ul className="nav-menu list-unstyled d-flex mb-0">
+        <ul className="nav-menu list-unstyled d-flex mb-0 text-decoration-none">
             <li className="nav-item">
               <NavLink to="/" className="nav-link nav-text-custom">Inicio</NavLink>
             </li>

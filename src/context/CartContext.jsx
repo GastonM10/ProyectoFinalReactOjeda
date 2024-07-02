@@ -52,6 +52,11 @@ export const CartProvider = ( {children} ) => {
       }).then((result) => {
         if(result.isConfirmed) {
           setCarrito([]);  
+          
+          Swal.fire({
+            icon: "success",
+            title: "Se vació el carrito",
+          });
         }
       });
     }
