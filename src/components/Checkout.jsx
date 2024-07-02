@@ -11,20 +11,34 @@ export const Checkout = () => {
     let [docId, setDocId] = useState("");
 
     const comprar = (data) => {
-        const pedido = {
-            cliente: data,
-            productos: carrito,
-            total: calcTot(),
-            fecha: Timestamp.now()
-        }
 
-        const pedidosRef = collection(db, "pedidos");
+        Swal.fire({
+            title: "Está seguro que desea realizar la compra?",
+            icon: "question",
+            showCancelButton: true,
+            confirmButtonColor: "#76DA3E",
+            confirmButtonText: "Sí, estoy seguro",
+            cancelButtonColor: "#d33",
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+            if(result.isConfirmed) {
+                const pedido = {
+                    cliente: data,
+                    productos: carrito,
+                    total: calcTot(),
+                    fecha: Timestamp.now()
+                }
+        
+                const pedidosRef = collection(db, "pedidos");
+        
+                addDoc(pedidosRef, pedido)
+                    .then((doc) => {
+                        setDocId(doc.id);
+                        emptyCartCheckout();
+                    })
+            }
+        });
 
-        addDoc(pedidosRef, pedido)
-            .then((doc) => {
-                setDocId(doc.id);
-                emptyCartCheckout();
-            })
     }
 
     if (docId) {
